@@ -4,23 +4,26 @@ import ProductRow from "./ProductRow";
 
 
 const ProductTable = (props) => {
-    const filteredData = props.data.filter(function (item) {
+    const sportArr = props.data.filter((item) => {
         if (item.category === "Sporting Goods") {
             return true
-        } else {
-            return false
         }
-    })
-
+    });
     return (
         <table>
-            <tr>
-                <th>Name</th>
-                <th>Price</th>
-            </tr>
-            <ProductCatogoryRow data={filteredData} />
-            <ProductRow data={filteredData} />
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Price</th>
+                </tr>
+            </thead>
+            <tbody>
+                <ProductCatogoryRow />
+                <ProductRow />
+            </tbody>
         </table>
     );
 }
+
+
 export default ProductTable;

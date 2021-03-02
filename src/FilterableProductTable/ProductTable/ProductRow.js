@@ -8,8 +8,8 @@ class ProductRow extends React.Component {
     render() {
         return (
             <tr>
-                <td>{this.props.data[0].name}</td>
-                <td>{this.props.data[0].price}</td>
+                <td></td>
+                <td></td>
             </tr>
         );
     }
